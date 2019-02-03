@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page in Bootstrap 4</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:100,200,400'>
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div ng-app="bootstrpConf">
+  <div id="signup_form_modal" class="modal fade" aria-hidden="true" role="dialog" aria-labelledby="modal_label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h4 class="modal-title" id="modal_label">Sign Up Today!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="signup_form" action="">
+            <fieldset class="form-group">
+              <label for="first_name">First Name:</label>
+              <input class="form-control" id="first_name" placeholder="First Name">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="last_name">Last Name:</label>
+              <input class="form-control" id="last_name" placeholder="Last Name">
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="email">Email:</label>
+              <input class="form-control" id="email" placeholder="Email">
+              <small class="text-muted">Your email will be used as your username.</small>
+            </fieldset>
+            <fieldset class="form-group">
+              <label for="profession">You're:</label>
+              <select id="profession" class="c-select">
+              <option>---</option>
+              <option>Javascript Developer</option>
+              <option>Ruby developer</option>
+              <option>Python developer</option>
+              <option>Web Designer</option>
+            </select>
+            </fieldset>
+            <fieldset class="form-group">
+              <label class="c-input c-radio">
+                <input type="radio" name="age" id="age1" value="under21">
+                <span class="c-indicator"></span>
+                I am &lt;21
+              </label>
+              <label class="c-input c-radio">
+                <input type="radio" name="age" id="age2" value="over21" checked>
+                <span class="c-indicator"></span>
+                I am &gt;21
+              </label>
+            </fieldset>
+            <fieldset class="form-group m-t-2">
+              <button class="btn btn-danger" type="submit">Sign Up</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+  <div id="speakers_modal" class="modal fade" aria-hidden="true" role="dialog" aria-labelledby="modal_label">
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <h4 class="modal-title" id="modal_label">Speakers</h4>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group">
+            <li class="list-group-item"><span>Jason Node</span> <a href="#" class="btn btn-sm btn-danger">Details</a></li>
+            <li class="list-group-item"><span>Alice Sass</span> <a href="#" class="btn btn-sm btn-danger">Details</a></li>
+            <li class="list-group-item"><span>Carl Ruby</span> <a href="#" class="btn btn-sm btn-danger">Details</a></li>
+            <li class="list-group-item"><span>Frank Script</span> <a href="#" class="btn btn-sm btn-danger">Details</a></li>
+            <li class="list-group-item"><span>Sophie Perl</span> <a href="#" class="btn btn-sm btn-danger">Details</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
+  <nav class="top-nav m-b-3 p-t-1 animated fadeInDown clearfix">
+    <div class="container">
+      <div class="logo" ><img style="border-radius: 70%;" src="img/logo.png"></div>
+      <ul class="list-unstyled list-inline">
+        <li class="list-inline-item m-r-1"><a href="#" class="js-scroll" data-scroll-to="#home">Home</a></li>
+
+        <li class="list-inline-item m-r-1"><a href="#" class="js-scroll" data-scroll-to="#about">About</a></li>
+        <li class="list-inline-item m-r-1"><a href="#" class="js-scroll" data-scroll-to="#products">Products and Services</a></li>
+        <li class="list-inline-item m-r-1"><a href="#" class="js-scroll" data-scroll-to="#contacts">Contacts</a></li>
+        <li class="list-inline-item m-r-0"><a href="#" class="btn signup-btn btn-danger btn-sm" data-toggle="modal" data-target="#signup_form_modal">Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- jumbotron -->
+
+  <header id="home" class="top-hero jumbotron-fluid p-b-3 bg-faded">
+  <!--the slide show-->
+  <div class="wrap">
+  
+    <div class="carousel">
+      <div class="inner">
+          <section data-transition='split_diamond'>
+        <div class="slide active">
+          <h1>polyutherine flouring</h1>
+        </div></section>
+        <div class="slide">
+          <h1>quality</h1>
+        </div>
+        <div class="slide">
+          <h1>classy</h1>
+        </div>
+      </div>
+      <div class="arrow arrow-left"></div>
+      <div class="arrow arrow-right"></div>
+    </div>
+  
+  </div>
+
+    
+  </header>
+
+
+  
+
+  <header id="" class="top-hero jumbotron-fluid p-b-3 bg-faded">
+    <div class="container animated fadeInUp">
+      <h1 class="display-3">WANT TO KNOW ABOUT US?</h1>
+      <p class="lead m-t-1"></p>
+      <p class="lead m-t-1 m-b-2">
+        Tintaflo limited is a supply and apply of manufacturing company of premium seamless resin flooring,
+        We are fast brand of choice for epoxy flooring and polyurethane flooring for industrial plants, manufacturing facilities, Automotive, Healthcare, Aerospace, Residential, Commercial, Food and beverages among others.
+        Our quality and attractive Design, technical support and advisory services makes us more popular flooring company across the world
+
+      </p>
+      <button type="button" class="btn btn-lg btn-danger m-t-1" data-toggle="modal" data-target="#signup_form_modal"> comments</button>
+      <button type="button" class="js-scroll btn btn-lg btn-default m-t-1" data-scroll-to="#speakers">Learn More</button>
+    </div>
+  </header>
+
+  <header id="about" class="top-hero1 jumbotron-fluid p-b-3 bg-faded">
+      <div class="container animated fadeInUp">
+            <!-- the about section -->
+  
+          <div class="container-fluid backgroungimg">
+                <div id="page1">
+                <div class="row">
+                <div class="col-4 centered-col">
+                  
+                <div class="col-4 centered-col">
+
+                  </div>  
+                  </div>
+                <div class="col-4 centered-col">
+                  <div class="top">
+
+                  </div>  
+                  </div>  
+                </div>  
+                  
+                <div class="container-fluid">
+                <div class="row">
+                  
+                <div class="col-6">
+                  
+                <img class="img-fluid" src="http://www.pvhc.net/img141/nnigvruvrrkwawjhreoj.png"style="width:600px;">    
+                </div>
+
+                <div class="col-6">
+                <div class="text">
+                <h1>Project 2</h1>
+                <p>This is our first home project. This project mainly focus on the HTML code and some CAA code. In this project we need to create an HTML Website based on the given image and paragraph. </p>
+                  <p>
+                What I have learn from this project is that I know how to use the unordered list and ordered list in the website, I know how to utilize the “divs” to put the icon, picture and text in the correct position on the website. What's more, the challenge form this project is that we need to put the three images and the three link into the same column. 
+                </p>
+                <h1>Project 2</h1>
+                <p>This is our first home project. This project mainly focus on the HTML code and some CAA code. In this project we need to create an HTML Website based on the given image and paragraph. </p>
+                  <p>
+                What I have learn from this project is that I know how to use the unordered list and ordered list in the website, I know how to utilize the “divs” to put the icon, picture and text in the correct position on the website. What's more, the challenge form this project is that we need to put the three images and the three link into the same column. 
+                </p>
+                  
+                <p>
+                This is the codepen link for this project: 
+                <a href="https://codepen.io/LucasFan/pen/oGyQWK">Project 2</a>
+
+                </p>
+                  
+
+
+                </div>  
+                </div>  
+                </div>     
+                  
+                </div>
+                </div>        
+          </div>
+        </p>
+      
+      </div>
+  
+    </header>
+
+     <!-- <a href="#" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#speakers_modal">Our Speakers</a>  --> 
+   
+     
+  <section id="products" class="top-hero2 jumbotron-fluid p-b-3 bg-faded">
+      <figure class="snip1543">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample108.jpg" alt="sample108" />
+          <figcaption>
+            <h3>Inverness McKenzie</h3>
+            <p>The only skills I have the patience to learn are those that have no real application in life.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1543 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample100.jpg" alt="sample100" />
+          <figcaption>
+            <h3>Alan Fresco</h3>
+            <p>The real fun of living wisely is that you get to be smug about it.</p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+        <figure class="snip1543"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample101.jpg" alt="sample101" />
+          <figcaption>
+            <h3>Indigo Violet</h3>
+            <p>But Calvin is no kind and loving god! He's one of the old gods! He demands sacrifice! </p>
+          </figcaption>
+          <a href="#"></a>
+        </figure>
+          <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+        
+
+          
+  </section>
+
+
+  <header id="contacts" class="top-hero1 jumbotron-fluid p-b-3 bg-faded">
+      <div class="container animated fadeInUp">
+            <!-- the about section -->
+    
+          <div class="container-fluid backgroungimg">
+                <div id="page1">
+                <div class="row">
+                <div class="col-4 centered-col">
+
+                <div class="col-4 centered-col">
+
+                  </div>  
+                  </div>
+                <div class="col-4 centered-col">
+                    <h2 class="m-b-2 display-5 text-uppercase">contacts</h2>
+                  </div>  
+                </div>  
+                  
+                <div class="container-fluid">
+                <div class="row">
+                  
+                <div class="col-6" style="float: left">
+                    <p >
+                      
+                      Phone </p>
+                      <p>+254732721638  </p>
+                      <p> Email  </p>
+                      <p>info@tintaflo.com   </p>
+                      <p>Address  </p>
+                      <p>TINTAFLO LIMITED  </p>
+                      <p>IMARA DAIMA  </p>
+                      <p>ALONG MOMBASA ROAD P.O. BOX  </p>
+                      <p>+254128-00200 NAIROBI- KENYA  </p>
+
+                   
+                     <P><a style="margin-left: 25px;" href="#" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#signup_form_modal">message</a></P>
+                </div>
+
+                <div class="col-6">
+                <div class="text">
+
+                    <div class="cont">
+                        <h1>Tintaflo limited</h1>
+                          <i>flooring company</i>
+                          <a href="#" class="fa fa-facebook"></a>
+                          <a href="#" class="fa fa-twitter"></a>
+                          <a href="#" class="fa fa-behance"></a>
+                          <a href="#" class="fa fa-codepen"></a>
+                          <a href="#" class="fa fa-github"></a>
+                        </div>
+                  
+
+
+                </div>  
+                </div>  
+                </div>     
+                  
+                </div>
+                </div>        
+          </div>
+        </p>
+      
+      </div>
+  
+    </header>
+
+
+
+
+
+  <footer class="p-y-2">
+    <p class="copyright"><span id="copyright-year">2019</span> All Rights Reserved</p>
+  </footer>
+  
+</div>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

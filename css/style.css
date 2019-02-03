@@ -1,0 +1,681 @@
+html {
+  font-size: 14px;
+}
+
+.animated {
+  animation-duration: 500ms;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+.btn.btn-danger {
+  border-color: #D90429;
+  background-color: #EF233C;
+}
+
+.btn.btn-primary {
+  border-color: #2B2D42;
+  background-color: #2B2D42;
+  margin-top: 5px;
+  width: 30%;
+
+}
+
+.btn.btn-default:hover {
+  background-color: #fafafa;
+}
+
+.logo{
+  border-radius: 50%;
+}
+.top-hero {
+  background-color: #fafafa;
+  background-image: linear-gradient(rgba(43, 45, 66, 0.75), rgba(43, 45, 66, 0.75)), url("https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+}
+
+.top-hero1 {
+  background-color: #fafafa;
+  background-image: linear-gradient(rgba(217, 4, 41, 0.45), rgba(217, 4, 41, 0.45)), url("uu.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+}
+
+.top-hero2 {
+  background-color: #fafafa;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("antislp.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 125px;
+  display: flex;
+  align-items: center;
+}
+.top-hero h1 {
+  color: #D90429;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 50%;
+  letter-spacing: -1px;
+  line-height: .9;
+}
+.top-hero p {
+  color: #EDF2F4;
+}
+@media only screen and (max-width: 768px) {
+  .top-hero {
+    min-height: 400px;
+    padding-top: 50px;
+  }
+  .top-hero h1 {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+}
+
+.top-nav {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.top-nav.sticky {
+  position: fixed;
+}
+.top-nav ul {
+  float: right;
+}
+.top-nav ul .signup-btn {
+  padding: .25em .5em;
+}
+.top-nav ul .signup-btn,
+.top-nav ul .signup-btn:hover {
+  color: #EDF2F4 !important;
+  border-bottom: 1px solid #D90429 !important;
+  border-color: #D90429 !important;
+}
+.top-nav a {
+  font-size: 1.1rem;
+  color: #EDF2F4;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  padding: 0 0 5px;
+  transition: .25s;
+}
+.top-nav a:hover {
+  color: #EF233C;
+  border-color: #EF233C;
+}
+
+.banner {
+  color: #EDF2F4;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.banner .wrapper {
+  
+}
+@media only screen and (max-width: 768px) {
+  .banner {
+    min-height: 400px;
+  }
+  .banner h1,
+  .banner h2 {
+    font-size: 20px;
+  }
+}
+.banner.speakers, .banner.signup {
+  background-color: #D90429;
+}
+.banner.speakers {
+  background-image: linear-gradient(rgba(217, 4, 41, 0.45), rgba(217, 4, 41, 0.45)), url("https://images.unsplash.com/photo-1485182708500-e8f1f318ba72?dpr=1&auto=compress,format&fit=crop&w=1199&h=764&q=80&cs=tinysrgb&crop=&bg=");
+}
+.banner.learn {
+  background-color: #2B2D42;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1493020258366-be3ead1b3027?dpr=1&auto=compress,format&fit=crop&w=1199&h=1199&q=80&cs=tinysrgb&crop=&bg=");
+}
+.banner.signup {
+  background-image: linear-gradient(rgba(217, 4, 41, 0.45), rgba(217, 4, 41, 0.45)), url("https://images.unsplash.com/photo-1487537708572-3c850b5e856e?dpr=1&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=&bg=");
+}
+
+footer {
+  text-align: center;
+  background-color: #2B2D42;
+  color: #EDF2F4;
+}
+footer .copyright {
+  padding: 0;
+  margin-top: 7px;
+  font-size: 0.9rem;
+}
+
+#speakers_modal .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* the slide stylings*/
+
+
+
+.wrap{
+  width:100%;
+  position:relative;
+  margin:5% auto 0;
+  height: auto;
+
+}
+
+/**
+ * Padding is set relative to the width
+ * of the element, so here padding-top:60% is
+ * a percentage of the width. This allows us 
+ * to set the height as a ratio of the width
+ *
+ */
+.carousel{
+	width: 100%;
+	position: relative;
+	padding-top: 60%;
+  overflow: hidden;
+  height: ;
+}
+
+.inner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+/**
+ * ==========================
+ * Animation styles
+ * 
+ * Notes:
+ * 1. We use z-index to position active slides in-front 
+ * of non-active slides
+ * 2. We set right:0 and left:0 on .slide to provide us with
+ * a default positioning on both sides of the slide. This allows 
+ * us to trigger JS and CSS3 animations easily
+ *
+ */
+.slide{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+	left:0;
+	z-index: 1;
+	opacity: 0;
+}
+
+.slide.active,
+.slide.left,
+.slide.right{
+	z-index: 2;
+	opacity: 1;
+}
+
+/**
+ * ==========================
+ * JS animation styles
+ * 
+ * We use jQuery.animate to control the sliding animations
+ * when CSS3 animations are not available. In order for
+ * the next slide to slide in from the right, we need
+ * to change the left:0 property of the slide to left:auto
+ *
+ */
+
+.js-reset-left{left:auto}
+
+/**
+ * ==========================
+ * CSS animation styles
+ * 
+ * .slide.left and .slide.right set-up
+ * the to-be-animated slide so that it can slide
+ * into view. For example, a slide that is about 
+ * to slide in from the right will:
+ * 1. Be positioned to the right of the viewport (right:-100%)
+ * 2. Slide in when the style is superseded with a more specific style (right:0%)
+ *
+ */
+.slide.left{
+	left:-100%;
+	right:0;
+}
+
+.slide.right{
+	right:-100%;
+	left: auto;
+}
+
+.transition .slide.left{left:0%}
+.transition .slide.right{right:0%}
+
+/**
+ * The following classes slide the previously active
+ * slide out of view before positioning behind the 
+ * currently active slide
+ *
+ */
+.transition .slide.shift-right{right: 100%;left:auto}
+.transition .slide.shift-left{left: 100%;right:auto}
+
+/**
+ * This sets the CSS properties that will animate. We set the
+ * transition-duration property dynamically via JS.
+ * We use the browser's default transition-timing-function
+ * for simplicity's sake
+ * 
+ * It is important to note that we are using CodePen's inbuilt
+ * CSS3 property prefixer. For your own projects, you will need
+ * to prefix the transition and transform properties here to ensure
+ * reliable support across browsers
+ *
+ */
+.transition .slide{
+	transition-property: right, left, margin;
+}
+
+/**
+ * ==========================
+ * Indicators
+ *
+ */
+.indicators{
+  width:100%;
+  position: absolute;
+  bottom:0;
+  z-index: 4;
+  padding:0;
+  text-align: center;
+}
+
+.indicators li{
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	margin: 5px;
+	background: #fff;
+	list-style-type: none;
+	border-radius: 50%;
+  cursor:pointer;
+  transition:background 0.3s ease-out;
+}
+
+.indicators li.active{background:#93278f}
+
+.indicators li:hover{background-color:#2b2b2b}
+
+/**
+ * ==========================
+ * Arrows 
+ *
+ */
+.arrow{
+  width: 20px;
+  height: 20px;
+  position:absolute;
+  top:50%;
+  z-index:5;
+  border-top:3px solid #fff;
+  border-right:3px solid #fff;
+  cursor:pointer;
+  transition:border-color 0.3s ease-out;
+}
+
+.arrow:hover{border-color:#93278f}
+
+.arrow-left{
+  left:20px;
+  transform:rotate(225deg);
+}
+
+.arrow-right{
+  right:20px;
+  transform:rotate(45deg);
+}
+
+/**
+ * ==========================
+ * For demo purposes only
+ * 
+ * Please note that the styles below are used
+ * for the purposes of this demo only. There is no need
+ * to use these in any of your own projects
+ *
+ */
+.slide{
+	text-align:center;
+  padding-top:25%;
+  background-size:cover;
+}
+
+.inner h1{
+	width:450px;
+  height:150px;
+  background-color:rgba(66, 68, 67, 0.7);
+  margin-left: 5%;
+  margin-top: 13%;
+	
+  line-height:100px;
+	color:#fff;
+	font-size:2.4em;
+  
+}
+
+.slide:nth-child(1){
+	background-image:url(uu.jpg);
+ }
+
+.slide:nth-child(2){
+	background-image:url(tintanice.jpg);
+}
+
+.slide:nth-child(3){
+	background-image:url(antislp.jpeg);
+ }
+
+
+
+ /*the products and services section*/
+
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+.snip1543 {
+  background-color: #fff;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  margin-left: 2%;
+  height: 90%;
+
+  
+  max-width: 415px;
+  min-width: 230px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.snip1543 *,
+.snip1543 *:before,
+.snip1543 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1543 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.snip1543:before,
+.snip1543:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #b81212;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.snip1543:before {
+  -webkit-transform: skew(30deg) translateX(-80%);
+  transform: skew(30deg) translateX(-80%);
+}
+
+.snip1543:after {
+  -webkit-transform: skew(-30deg) translateX(-70%);
+  transform: skew(-30deg) translateX(-70%);
+}
+
+.snip1543 figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 25px 40% 25px 20px;
+}
+
+.snip1543 figcaption:before,
+.snip1543 figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #b81212;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: '';
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.snip1543 figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-100%);
+  transform: skew(30deg) translateX(-100%);
+}
+
+.snip1543 figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-90%);
+  transform: skew(-30deg) translateX(-90%);
+}
+
+.snip1543 h3,
+.snip1543 p {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+
+.snip1543 h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.snip1543 p {
+  font-size: 0.9em;
+}
+
+.snip1543 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1543:hover h3,
+.snip1543.hover h3,
+.snip1543:hover p,
+.snip1543.hover p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0.9;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.snip1543:hover:before,
+.snip1543.hover:before {
+  -webkit-transform: skew(30deg) translateX(-20%);
+  transform: skew(30deg) translateX(-20%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.snip1543:hover:after,
+.snip1543.hover:after {
+  -webkit-transform: skew(-30deg) translateX(-10%);
+  transform: skew(-30deg) translateX(-10%);
+}
+
+.snip1543:hover figcaption:before,
+.snip1543.hover figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-40%);
+  transform: skew(30deg) translateX(-40%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.snip1543:hover figcaption:after,
+.snip1543.hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-30%);
+  transform: skew(-30deg) translateX(-30%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* the end products and services styling*/
+
+
+/* the contacts  styling*/
+
+/* the contacts  styling*/
+.cont {
+  height: 100%;
+  margin:0
+}
+
+.cont {
+  text-align: left;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  background-size: cover;
+  overflow: hidden;
+  padding-right: 50px
+}
+
+.cont:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(40, 40, 45, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: -1
+}
+.cont a{
+  color:inherit
+}
+.cont h1 {
+  width: 100%;
+  margin: 40vh 0 3vh 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  transition:all 0.4s
+}
+.cont h1:hover{
+  color:#08c
+}
+.cont i {
+  display: block;
+  width: 100%;
+  margin-bottom: 4vh;
+  font-size:1em
+}
+
+.fa {
+  display: inline-block;  
+  color: inherit;
+  border:1px solid;
+  text-decoration: none;
+  padding-top: 12px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20%;
+  box-sizing: border-box;
+  margin-left: 1em;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.4s;
+}
+
+.fa:hover {
+  color: #05a;  
+  border-color:inherit;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fa:nth-of-type(2):hover {
+  color: #09c;
+  border-color:inherit
+}
+
+.fa:nth-of-type(3):hover {
+  color: #d19;
+  border-color:inherit
+  
+}
+
+.fa:nth-of-type(4):hover {
+  color: #e90;
+  border-color:inherit
+}
+
+.fa:nth-of-type(5):hover {
+  color: #0c6;
+  border-color:inherit
+}
+
+
+.white{
+  color:#333
+}
+.white:before{
+  background: rgba(240, 240, 240, 0.8);
+}
+.white footer, .white .fa:hover{
+  background-color:rgba(250, 250, 2520, 0.4);
+}
+
+/* the end  contacts  styling*/
